@@ -1,0 +1,41 @@
+<?php return array(
+    'root' => array(
+        'name' => 'hyperapi/framework',
+        'pretty_version' => '0.3',
+        'version' => '0.3.0.0',
+        'reference' => null,
+        'type' => 'library',
+        'install_path' => __DIR__ . '/../../',
+        'aliases' => array(),
+        'dev' => true,
+    ),
+    'versions' => array(
+        'hyperapi/framework' => array(
+            'pretty_version' => '0.3',
+            'version' => '0.3.0.0',
+            'reference' => null,
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../../',
+            'aliases' => array(),
+            'dev_requirement' => false,
+        ),
+        'workerman/coroutine' => array(
+            'pretty_version' => 'v1.1.4',
+            'version' => '1.1.4.0',
+            'reference' => 'b0bebfa9d41b992ad0a835ddf2ee8fa5d58eca44',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../workerman/coroutine',
+            'aliases' => array(),
+            'dev_requirement' => false,
+        ),
+        'workerman/workerman' => array(
+            'pretty_version' => 'v5.1.4',
+            'version' => '5.1.4.0',
+            'reference' => 'ff4e17babdc92b16b3252060233c88f6c2e9a61a',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../workerman/workerman',
+            'aliases' => array(),
+            'dev_requirement' => false,
+        ),
+    ),
+);

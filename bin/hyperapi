@@ -1,0 +1,25 @@
+#!/usr/bin/env php
+<?php
+require __DIR__ . '/../vendor/autoload.php';
+
+use Workerman\Worker;
+
+$port = $argv[1] ?? 8080;
+$app = require __DIR__ . '/../examples/routes.php';
+
+$worker = new Worker("http://0.0.0.0:$port");
+$worker->count = 4;
+
+$worker->onMessage = function($connection, $request) use ($app){
+    $_SERVER['REQUEST_URI'] = $request->path();
+    $_SERVER['REQUEST_METHOD'] = $request->method();
+    $_GET = $request->get() ?? [];
+    $_POST = $request->post() ?? [];
+    ob_start();
+    $app->run();
+    $content = ob_get_clean();
+    $connection->send($content);
+};
+
+Worker::runAll();
+
