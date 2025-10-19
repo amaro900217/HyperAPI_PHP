@@ -1,4 +1,4 @@
-# HyperAPI 0.3
+# HyperAPI Framework 0.3
 
 **Ultra-light PHP microframework for hypermedia APIs and HTML fragments.**
 
@@ -14,7 +14,7 @@ HyperAPI is designed to be **minimal, fast, and flexible**, perfect for:
 
 ## Features
 
-- Minimal core: only 3 classes (`HyperAPI`, `Request`, `Response`)  
+- Minimal core: only 3 classes (`Core`, `Request`, `Response`)  
 - Middleware before and after routes  
 - Named route parameters (`/tasks/{id}/toggle`)  
 - Plugin/addon support  
@@ -39,73 +39,28 @@ HyperAPI is designed to be **minimal, fast, and flexible**, perfect for:
 Clone the repository and install dependencies:
 
 ```bash
-git clone https://github.com/yourusername/hyperapi.git
-cd hyperapi
+git clone https://github.com/yourusername/hyperapi_php.git
+cd hyperapi_php
 composer install
 ```
 
 ---
 
-## Project Structure
+## Usage
 
-```
-HyperAPI_0.3/
- ├── src/          # Core framework
- │    ├── HyperAPI.php
- │    ├── Request.php
- │    └── Response.php
- ├── examples/     # Example usage
- │    ├── index.php
- │    └── routes.php
- ├── bin/          # CLI runner with Workerman
- │    └── hyperapi
- ├── addons/       # Optional plugins
- ├── database/     # SQLite DB
- ├── composer.json
- ├── README.md
- └── LICENSE
-```
+```php
+use HyperAPI\Core;
+use HyperAPI\Request;
+use HyperAPI\Response;
 
----
+$app = new Core();
 
-## Running EXAMPLE (Traditional PHP)
+$app->get('/api/tasks', function(Request $req, Response $res) {
+    // Your logic here
+    return $res->json(['tasks' => []]);
+});
 
-```bash
-cd examples
-php -S localhost:8000
-```
-
-Open your browser at [http://localhost:8000](http://localhost:8000)  
-
-### Routes EXAMPLE
-
-```
-GET  /api/tasks             → list tasks (HTML fragment)
-POST /api/tasks             → create a new task
-POST /api/tasks/{id}/toggle → toggle task done
-POST /api/tasks/{id}/delete → delete a task
-```
-
----
-
-## Running EXAMPLE (CLI / Workerman)
-
-```bash
-php bin/hyperapi 8080
-```
-
-- Runs an HTTP server on port 8080
-- Supports concurrent connections
-- Works with APIs and HTML fragments
-
----
-
-## Creating a New Task (EXAMPLE)
-
-### Using cURL
-
-```bash
-curl -X POST -d "title=Buy milk" http://localhost:8000/api/tasks
+$app->run();
 ```
 
 ---

@@ -1,12 +1,383 @@
-2025-10-18 18:17:14 pid:15882 Workerman[hyperapi] start in DEBUG mode
-2025-10-18 18:17:18 pid:15882 Workerman[hyperapi] received signal SIGINT
-2025-10-18 18:17:18 pid:15882 Workerman[hyperapi] stopping
-2025-10-18 18:17:18 pid:15882 Workerman[hyperapi] has been stopped
-2025-10-18 18:17:21 pid:15889 Workerman[hyperapi] start in DEBUG mode
-2025-10-18 18:17:25 pid:15889 Workerman[hyperapi] received signal SIGINT
-2025-10-18 18:17:25 pid:15889 Workerman[hyperapi] stopping
-2025-10-18 18:17:25 pid:15889 Workerman[hyperapi] has been stopped
-2025-10-18 18:17:27 pid:15895 Workerman[hyperapi] start in DEBUG mode
-2025-10-18 18:36:40 pid:15895 Workerman[hyperapi] received signal SIGINT
-2025-10-18 18:36:40 pid:15895 Workerman[hyperapi] stopping
-2025-10-18 18:36:40 pid:15895 Workerman[hyperapi] has been stopped
+2025-10-19 10:17:49 pid:10224 Workerman[server.php] start in DEBUG mode
+2025-10-19 10:25:46 pid:10224 Workerman[server.php] received signal SIGINT
+2025-10-19 10:25:46 pid:10224 Workerman[server.php] stopping
+2025-10-19 10:25:46 pid:10224 Workerman[server.php] has been stopped
+2025-10-19 10:26:56 pid:11922 Workerman[server.php] start in DEBUG mode
+2025-10-19 10:26:59 pid:11926 FastRoute\BadRouteException: Cannot register two routes matching "/not-found" for method "GET" in /home/linux/Documents/HyperAPI_PHP/vendor/nikic/fast-route/src/DataGenerator/RegexBasedAbstract.php:86
+Stack trace:
+#0 /home/linux/Documents/HyperAPI_PHP/vendor/nikic/fast-route/src/DataGenerator/RegexBasedAbstract.php(30): FastRoute\DataGenerator\RegexBasedAbstract->addStaticRoute()
+#1 /home/linux/Documents/HyperAPI_PHP/vendor/nikic/fast-route/src/RouteCollector.php(44): FastRoute\DataGenerator\RegexBasedAbstract->addRoute()
+#2 /home/linux/Documents/HyperAPI_PHP/src/Core.php(43): FastRoute\RouteCollector->addRoute()
+#3 /home/linux/Documents/HyperAPI_PHP/vendor/nikic/fast-route/src/functions.php(25): HyperAPI\Core->{closure:HyperAPI\Core::run():40}()
+#4 /home/linux/Documents/HyperAPI_PHP/src/Core.php(40): FastRoute\simpleDispatcher()
+#5 /home/linux/Documents/HyperAPI_PHP/bin/server.php(21): HyperAPI\Core->run()
+#6 /home/linux/Documents/HyperAPI_PHP/vendor/workerman/workerman/src/Connection/TcpConnection.php(750): {closure:/home/linux/Documents/HyperAPI_PHP/bin/server.php:15}()
+#7 /home/linux/Documents/HyperAPI_PHP/vendor/workerman/workerman/src/Events/Select.php(406): Workerman\Connection\TcpConnection->baseRead()
+#8 /home/linux/Documents/HyperAPI_PHP/vendor/workerman/workerman/src/Worker.php(1756): Workerman\Events\Select->run()
+#9 /home/linux/Documents/HyperAPI_PHP/vendor/workerman/workerman/src/Worker.php(1552): Workerman\Worker::forkOneWorkerForLinux()
+#10 /home/linux/Documents/HyperAPI_PHP/vendor/workerman/workerman/src/Worker.php(1532): Workerman\Worker::forkWorkersForLinux()
+#11 /home/linux/Documents/HyperAPI_PHP/vendor/workerman/workerman/src/Worker.php(601): Workerman\Worker::forkWorkers()
+#12 /home/linux/Documents/HyperAPI_PHP/bin/server.php(26): Workerman\Worker::runAll()
+#13 {main}
+2025-10-19 10:26:59 pid:11925 FastRoute\BadRouteException: Cannot register two routes matching "/not-found" for method "GET" in /home/linux/Documents/HyperAPI_PHP/vendor/nikic/fast-route/src/DataGenerator/RegexBasedAbstract.php:86
+Stack trace:
+#0 /home/linux/Documents/HyperAPI_PHP/vendor/nikic/fast-route/src/DataGenerator/RegexBasedAbstract.php(30): FastRoute\DataGenerator\RegexBasedAbstract->addStaticRoute()
+#1 /home/linux/Documents/HyperAPI_PHP/vendor/nikic/fast-route/src/RouteCollector.php(44): FastRoute\DataGenerator\RegexBasedAbstract->addRoute()
+#2 /home/linux/Documents/HyperAPI_PHP/src/Core.php(43): FastRoute\RouteCollector->addRoute()
+#3 /home/linux/Documents/HyperAPI_PHP/vendor/nikic/fast-route/src/functions.php(25): HyperAPI\Core->{closure:HyperAPI\Core::run():40}()
+#4 /home/linux/Documents/HyperAPI_PHP/src/Core.php(40): FastRoute\simpleDispatcher()
+#5 /home/linux/Documents/HyperAPI_PHP/bin/server.php(21): HyperAPI\Core->run()
+#6 /home/linux/Documents/HyperAPI_PHP/vendor/workerman/workerman/src/Connection/TcpConnection.php(750): {closure:/home/linux/Documents/HyperAPI_PHP/bin/server.php:15}()
+#7 /home/linux/Documents/HyperAPI_PHP/vendor/workerman/workerman/src/Events/Select.php(406): Workerman\Connection\TcpConnection->baseRead()
+#8 /home/linux/Documents/HyperAPI_PHP/vendor/workerman/workerman/src/Worker.php(1756): Workerman\Events\Select->run()
+#9 /home/linux/Documents/HyperAPI_PHP/vendor/workerman/workerman/src/Worker.php(1552): Workerman\Worker::forkOneWorkerForLinux()
+#10 /home/linux/Documents/HyperAPI_PHP/vendor/workerman/workerman/src/Worker.php(1532): Workerman\Worker::forkWorkersForLinux()
+#11 /home/linux/Documents/HyperAPI_PHP/vendor/workerman/workerman/src/Worker.php(601): Workerman\Worker::forkWorkers()
+#12 /home/linux/Documents/HyperAPI_PHP/bin/server.php(26): Workerman\Worker::runAll()
+#13 {main}
+2025-10-19 10:26:59 pid:11923 FastRoute\BadRouteException: Cannot register two routes matching "/not-found" for method "GET" in /home/linux/Documents/HyperAPI_PHP/vendor/nikic/fast-route/src/DataGenerator/RegexBasedAbstract.php:86
+Stack trace:
+#0 /home/linux/Documents/HyperAPI_PHP/vendor/nikic/fast-route/src/DataGenerator/RegexBasedAbstract.php(30): FastRoute\DataGenerator\RegexBasedAbstract->addStaticRoute()
+#1 /home/linux/Documents/HyperAPI_PHP/vendor/nikic/fast-route/src/RouteCollector.php(44): FastRoute\DataGenerator\RegexBasedAbstract->addRoute()
+#2 /home/linux/Documents/HyperAPI_PHP/src/Core.php(43): FastRoute\RouteCollector->addRoute()
+#3 /home/linux/Documents/HyperAPI_PHP/vendor/nikic/fast-route/src/functions.php(25): HyperAPI\Core->{closure:HyperAPI\Core::run():40}()
+#4 /home/linux/Documents/HyperAPI_PHP/src/Core.php(40): FastRoute\simpleDispatcher()
+#5 /home/linux/Documents/HyperAPI_PHP/bin/server.php(21): HyperAPI\Core->run()
+#6 /home/linux/Documents/HyperAPI_PHP/vendor/workerman/workerman/src/Connection/TcpConnection.php(750): {closure:/home/linux/Documents/HyperAPI_PHP/bin/server.php:15}()
+#7 /home/linux/Documents/HyperAPI_PHP/vendor/workerman/workerman/src/Events/Select.php(406): Workerman\Connection\TcpConnection->baseRead()
+#8 /home/linux/Documents/HyperAPI_PHP/vendor/workerman/workerman/src/Worker.php(1756): Workerman\Events\Select->run()
+#9 /home/linux/Documents/HyperAPI_PHP/vendor/workerman/workerman/src/Worker.php(1552): Workerman\Worker::forkOneWorkerForLinux()
+#10 /home/linux/Documents/HyperAPI_PHP/vendor/workerman/workerman/src/Worker.php(1532): Workerman\Worker::forkWorkersForLinux()
+#11 /home/linux/Documents/HyperAPI_PHP/vendor/workerman/workerman/src/Worker.php(601): Workerman\Worker::forkWorkers()
+#12 /home/linux/Documents/HyperAPI_PHP/bin/server.php(26): Workerman\Worker::runAll()
+#13 {main}
+2025-10-19 10:26:59 pid:11924 FastRoute\BadRouteException: Cannot register two routes matching "/not-found" for method "GET" in /home/linux/Documents/HyperAPI_PHP/vendor/nikic/fast-route/src/DataGenerator/RegexBasedAbstract.php:86
+Stack trace:
+#0 /home/linux/Documents/HyperAPI_PHP/vendor/nikic/fast-route/src/DataGenerator/RegexBasedAbstract.php(30): FastRoute\DataGenerator\RegexBasedAbstract->addStaticRoute()
+#1 /home/linux/Documents/HyperAPI_PHP/vendor/nikic/fast-route/src/RouteCollector.php(44): FastRoute\DataGenerator\RegexBasedAbstract->addRoute()
+#2 /home/linux/Documents/HyperAPI_PHP/src/Core.php(43): FastRoute\RouteCollector->addRoute()
+#3 /home/linux/Documents/HyperAPI_PHP/vendor/nikic/fast-route/src/functions.php(25): HyperAPI\Core->{closure:HyperAPI\Core::run():40}()
+#4 /home/linux/Documents/HyperAPI_PHP/src/Core.php(40): FastRoute\simpleDispatcher()
+#5 /home/linux/Documents/HyperAPI_PHP/bin/server.php(21): HyperAPI\Core->run()
+#6 /home/linux/Documents/HyperAPI_PHP/vendor/workerman/workerman/src/Connection/TcpConnection.php(750): {closure:/home/linux/Documents/HyperAPI_PHP/bin/server.php:15}()
+#7 /home/linux/Documents/HyperAPI_PHP/vendor/workerman/workerman/src/Events/Select.php(406): Workerman\Connection\TcpConnection->baseRead()
+#8 /home/linux/Documents/HyperAPI_PHP/vendor/workerman/workerman/src/Worker.php(1756): Workerman\Events\Select->run()
+#9 /home/linux/Documents/HyperAPI_PHP/vendor/workerman/workerman/src/Worker.php(1552): Workerman\Worker::forkOneWorkerForLinux()
+#10 /home/linux/Documents/HyperAPI_PHP/vendor/workerman/workerman/src/Worker.php(1532): Workerman\Worker::forkWorkersForLinux()
+#11 /home/linux/Documents/HyperAPI_PHP/vendor/workerman/workerman/src/Worker.php(601): Workerman\Worker::forkWorkers()
+#12 /home/linux/Documents/HyperAPI_PHP/bin/server.php(26): Workerman\Worker::runAll()
+#13 {main}
+2025-10-19 10:26:59 pid:11922 worker[none:11926] exit with status 64000
+2025-10-19 10:26:59 pid:11922 worker[none:11925] exit with status 64000
+2025-10-19 10:26:59 pid:11929 FastRoute\BadRouteException: Cannot register two routes matching "/not-found" for method "GET" in /home/linux/Documents/HyperAPI_PHP/vendor/nikic/fast-route/src/DataGenerator/RegexBasedAbstract.php:86
+Stack trace:
+#0 /home/linux/Documents/HyperAPI_PHP/vendor/nikic/fast-route/src/DataGenerator/RegexBasedAbstract.php(30): FastRoute\DataGenerator\RegexBasedAbstract->addStaticRoute()
+#1 /home/linux/Documents/HyperAPI_PHP/vendor/nikic/fast-route/src/RouteCollector.php(44): FastRoute\DataGenerator\RegexBasedAbstract->addRoute()
+#2 /home/linux/Documents/HyperAPI_PHP/src/Core.php(43): FastRoute\RouteCollector->addRoute()
+#3 /home/linux/Documents/HyperAPI_PHP/vendor/nikic/fast-route/src/functions.php(25): HyperAPI\Core->{closure:HyperAPI\Core::run():40}()
+#4 /home/linux/Documents/HyperAPI_PHP/src/Core.php(40): FastRoute\simpleDispatcher()
+#5 /home/linux/Documents/HyperAPI_PHP/bin/server.php(21): HyperAPI\Core->run()
+#6 /home/linux/Documents/HyperAPI_PHP/vendor/workerman/workerman/src/Connection/TcpConnection.php(750): {closure:/home/linux/Documents/HyperAPI_PHP/bin/server.php:15}()
+#7 /home/linux/Documents/HyperAPI_PHP/vendor/workerman/workerman/src/Events/Select.php(406): Workerman\Connection\TcpConnection->baseRead()
+#8 /home/linux/Documents/HyperAPI_PHP/vendor/workerman/workerman/src/Worker.php(1756): Workerman\Events\Select->run()
+#9 /home/linux/Documents/HyperAPI_PHP/vendor/workerman/workerman/src/Worker.php(1552): Workerman\Worker::forkOneWorkerForLinux()
+#10 /home/linux/Documents/HyperAPI_PHP/vendor/workerman/workerman/src/Worker.php(1532): Workerman\Worker::forkWorkersForLinux()
+#11 /home/linux/Documents/HyperAPI_PHP/vendor/workerman/workerman/src/Worker.php(1901): Workerman\Worker::forkWorkers()
+#12 /home/linux/Documents/HyperAPI_PHP/vendor/workerman/workerman/src/Worker.php(1836): Workerman\Worker::monitorWorkersForLinux()
+#13 /home/linux/Documents/HyperAPI_PHP/vendor/workerman/workerman/src/Worker.php(603): Workerman\Worker::monitorWorkers()
+#14 /home/linux/Documents/HyperAPI_PHP/bin/server.php(26): Workerman\Worker::runAll()
+#15 {main}
+2025-10-19 10:26:59 pid:11922 worker[none:11923] exit with status 64000
+2025-10-19 10:26:59 pid:11922 worker[none:11924] exit with status 64000
+2025-10-19 10:26:59 pid:11930 FastRoute\BadRouteException: Cannot register two routes matching "/not-found" for method "GET" in /home/linux/Documents/HyperAPI_PHP/vendor/nikic/fast-route/src/DataGenerator/RegexBasedAbstract.php:86
+Stack trace:
+#0 /home/linux/Documents/HyperAPI_PHP/vendor/nikic/fast-route/src/DataGenerator/RegexBasedAbstract.php(30): FastRoute\DataGenerator\RegexBasedAbstract->addStaticRoute()
+#1 /home/linux/Documents/HyperAPI_PHP/vendor/nikic/fast-route/src/RouteCollector.php(44): FastRoute\DataGenerator\RegexBasedAbstract->addRoute()
+#2 /home/linux/Documents/HyperAPI_PHP/src/Core.php(43): FastRoute\RouteCollector->addRoute()
+#3 /home/linux/Documents/HyperAPI_PHP/vendor/nikic/fast-route/src/functions.php(25): HyperAPI\Core->{closure:HyperAPI\Core::run():40}()
+#4 /home/linux/Documents/HyperAPI_PHP/src/Core.php(40): FastRoute\simpleDispatcher()
+#5 /home/linux/Documents/HyperAPI_PHP/bin/server.php(21): HyperAPI\Core->run()
+#6 /home/linux/Documents/HyperAPI_PHP/vendor/workerman/workerman/src/Connection/TcpConnection.php(750): {closure:/home/linux/Documents/HyperAPI_PHP/bin/server.php:15}()
+#7 /home/linux/Documents/HyperAPI_PHP/vendor/workerman/workerman/src/Events/Select.php(406): Workerman\Connection\TcpConnection->baseRead()
+#8 /home/linux/Documents/HyperAPI_PHP/vendor/workerman/workerman/src/Worker.php(1756): Workerman\Events\Select->run()
+#9 /home/linux/Documents/HyperAPI_PHP/vendor/workerman/workerman/src/Worker.php(1552): Workerman\Worker::forkOneWorkerForLinux()
+#10 /home/linux/Documents/HyperAPI_PHP/vendor/workerman/workerman/src/Worker.php(1532): Workerman\Worker::forkWorkersForLinux()
+#11 /home/linux/Documents/HyperAPI_PHP/vendor/workerman/workerman/src/Worker.php(1901): Workerman\Worker::forkWorkers()
+#12 /home/linux/Documents/HyperAPI_PHP/vendor/workerman/workerman/src/Worker.php(1836): Workerman\Worker::monitorWorkersForLinux()
+#13 /home/linux/Documents/HyperAPI_PHP/vendor/workerman/workerman/src/Worker.php(603): Workerman\Worker::monitorWorkers()
+#14 /home/linux/Documents/HyperAPI_PHP/bin/server.php(26): Workerman\Worker::runAll()
+#15 {main}
+2025-10-19 10:26:59 pid:11931 FastRoute\BadRouteException: Cannot register two routes matching "/not-found" for method "GET" in /home/linux/Documents/HyperAPI_PHP/vendor/nikic/fast-route/src/DataGenerator/RegexBasedAbstract.php:86
+Stack trace:
+#0 /home/linux/Documents/HyperAPI_PHP/vendor/nikic/fast-route/src/DataGenerator/RegexBasedAbstract.php(30): FastRoute\DataGenerator\RegexBasedAbstract->addStaticRoute()
+#1 /home/linux/Documents/HyperAPI_PHP/vendor/nikic/fast-route/src/RouteCollector.php(44): FastRoute\DataGenerator\RegexBasedAbstract->addRoute()
+#2 /home/linux/Documents/HyperAPI_PHP/src/Core.php(43): FastRoute\RouteCollector->addRoute()
+#3 /home/linux/Documents/HyperAPI_PHP/vendor/nikic/fast-route/src/functions.php(25): HyperAPI\Core->{closure:HyperAPI\Core::run():40}()
+#4 /home/linux/Documents/HyperAPI_PHP/src/Core.php(40): FastRoute\simpleDispatcher()
+#5 /home/linux/Documents/HyperAPI_PHP/bin/server.php(21): HyperAPI\Core->run()
+#6 /home/linux/Documents/HyperAPI_PHP/vendor/workerman/workerman/src/Connection/TcpConnection.php(750): {closure:/home/linux/Documents/HyperAPI_PHP/bin/server.php:15}()
+#7 /home/linux/Documents/HyperAPI_PHP/vendor/workerman/workerman/src/Events/Select.php(406): Workerman\Connection\TcpConnection->baseRead()
+#8 /home/linux/Documents/HyperAPI_PHP/vendor/workerman/workerman/src/Worker.php(1756): Workerman\Events\Select->run()
+#9 /home/linux/Documents/HyperAPI_PHP/vendor/workerman/workerman/src/Worker.php(1552): Workerman\Worker::forkOneWorkerForLinux()
+#10 /home/linux/Documents/HyperAPI_PHP/vendor/workerman/workerman/src/Worker.php(1532): Workerman\Worker::forkWorkersForLinux()
+#11 /home/linux/Documents/HyperAPI_PHP/vendor/workerman/workerman/src/Worker.php(1901): Workerman\Worker::forkWorkers()
+#12 /home/linux/Documents/HyperAPI_PHP/vendor/workerman/workerman/src/Worker.php(1836): Workerman\Worker::monitorWorkersForLinux()
+#13 /home/linux/Documents/HyperAPI_PHP/vendor/workerman/workerman/src/Worker.php(603): Workerman\Worker::monitorWorkers()
+#14 /home/linux/Documents/HyperAPI_PHP/bin/server.php(26): Workerman\Worker::runAll()
+#15 {main}
+2025-10-19 10:26:59 pid:11932 FastRoute\BadRouteException: Cannot register two routes matching "/not-found" for method "GET" in /home/linux/Documents/HyperAPI_PHP/vendor/nikic/fast-route/src/DataGenerator/RegexBasedAbstract.php:86
+Stack trace:
+#0 /home/linux/Documents/HyperAPI_PHP/vendor/nikic/fast-route/src/DataGenerator/RegexBasedAbstract.php(30): FastRoute\DataGenerator\RegexBasedAbstract->addStaticRoute()
+#1 /home/linux/Documents/HyperAPI_PHP/vendor/nikic/fast-route/src/RouteCollector.php(44): FastRoute\DataGenerator\RegexBasedAbstract->addRoute()
+#2 /home/linux/Documents/HyperAPI_PHP/src/Core.php(43): FastRoute\RouteCollector->addRoute()
+#3 /home/linux/Documents/HyperAPI_PHP/vendor/nikic/fast-route/src/functions.php(25): HyperAPI\Core->{closure:HyperAPI\Core::run():40}()
+#4 /home/linux/Documents/HyperAPI_PHP/src/Core.php(40): FastRoute\simpleDispatcher()
+#5 /home/linux/Documents/HyperAPI_PHP/bin/server.php(21): HyperAPI\Core->run()
+#6 /home/linux/Documents/HyperAPI_PHP/vendor/workerman/workerman/src/Connection/TcpConnection.php(750): {closure:/home/linux/Documents/HyperAPI_PHP/bin/server.php:15}()
+#7 /home/linux/Documents/HyperAPI_PHP/vendor/workerman/workerman/src/Events/Select.php(406): Workerman\Connection\TcpConnection->baseRead()
+#8 /home/linux/Documents/HyperAPI_PHP/vendor/workerman/workerman/src/Worker.php(1756): Workerman\Events\Select->run()
+#9 /home/linux/Documents/HyperAPI_PHP/vendor/workerman/workerman/src/Worker.php(1552): Workerman\Worker::forkOneWorkerForLinux()
+#10 /home/linux/Documents/HyperAPI_PHP/vendor/workerman/workerman/src/Worker.php(1532): Workerman\Worker::forkWorkersForLinux()
+#11 /home/linux/Documents/HyperAPI_PHP/vendor/workerman/workerman/src/Worker.php(1901): Workerman\Worker::forkWorkers()
+#12 /home/linux/Documents/HyperAPI_PHP/vendor/workerman/workerman/src/Worker.php(1836): Workerman\Worker::monitorWorkersForLinux()
+#13 /home/linux/Documents/HyperAPI_PHP/vendor/workerman/workerman/src/Worker.php(603): Workerman\Worker::monitorWorkers()
+#14 /home/linux/Documents/HyperAPI_PHP/bin/server.php(26): Workerman\Worker::runAll()
+#15 {main}
+2025-10-19 10:26:59 pid:11922 worker[none:11930] exit with status 64000
+2025-10-19 10:26:59 pid:11922 worker[none:11929] exit with status 64000
+2025-10-19 10:26:59 pid:11922 worker[none:11931] exit with status 64000
+2025-10-19 10:26:59 pid:11933 FastRoute\BadRouteException: Cannot register two routes matching "/not-found" for method "GET" in /home/linux/Documents/HyperAPI_PHP/vendor/nikic/fast-route/src/DataGenerator/RegexBasedAbstract.php:86
+Stack trace:
+#0 /home/linux/Documents/HyperAPI_PHP/vendor/nikic/fast-route/src/DataGenerator/RegexBasedAbstract.php(30): FastRoute\DataGenerator\RegexBasedAbstract->addStaticRoute()
+#1 /home/linux/Documents/HyperAPI_PHP/vendor/nikic/fast-route/src/RouteCollector.php(44): FastRoute\DataGenerator\RegexBasedAbstract->addRoute()
+#2 /home/linux/Documents/HyperAPI_PHP/src/Core.php(43): FastRoute\RouteCollector->addRoute()
+#3 /home/linux/Documents/HyperAPI_PHP/vendor/nikic/fast-route/src/functions.php(25): HyperAPI\Core->{closure:HyperAPI\Core::run():40}()
+#4 /home/linux/Documents/HyperAPI_PHP/src/Core.php(40): FastRoute\simpleDispatcher()
+#5 /home/linux/Documents/HyperAPI_PHP/bin/server.php(21): HyperAPI\Core->run()
+#6 /home/linux/Documents/HyperAPI_PHP/vendor/workerman/workerman/src/Connection/TcpConnection.php(750): {closure:/home/linux/Documents/HyperAPI_PHP/bin/server.php:15}()
+#7 /home/linux/Documents/HyperAPI_PHP/vendor/workerman/workerman/src/Events/Select.php(406): Workerman\Connection\TcpConnection->baseRead()
+#8 /home/linux/Documents/HyperAPI_PHP/vendor/workerman/workerman/src/Worker.php(1756): Workerman\Events\Select->run()
+#9 /home/linux/Documents/HyperAPI_PHP/vendor/workerman/workerman/src/Worker.php(1552): Workerman\Worker::forkOneWorkerForLinux()
+#10 /home/linux/Documents/HyperAPI_PHP/vendor/workerman/workerman/src/Worker.php(1532): Workerman\Worker::forkWorkersForLinux()
+#11 /home/linux/Documents/HyperAPI_PHP/vendor/workerman/workerman/src/Worker.php(1901): Workerman\Worker::forkWorkers()
+#12 /home/linux/Documents/HyperAPI_PHP/vendor/workerman/workerman/src/Worker.php(1836): Workerman\Worker::monitorWorkersForLinux()
+#13 /home/linux/Documents/HyperAPI_PHP/vendor/workerman/workerman/src/Worker.php(603): Workerman\Worker::monitorWorkers()
+#14 /home/linux/Documents/HyperAPI_PHP/bin/server.php(26): Workerman\Worker::runAll()
+#15 {main}
+2025-10-19 10:26:59 pid:11934 FastRoute\BadRouteException: Cannot register two routes matching "/not-found" for method "GET" in /home/linux/Documents/HyperAPI_PHP/vendor/nikic/fast-route/src/DataGenerator/RegexBasedAbstract.php:86
+Stack trace:
+#0 /home/linux/Documents/HyperAPI_PHP/vendor/nikic/fast-route/src/DataGenerator/RegexBasedAbstract.php(30): FastRoute\DataGenerator\RegexBasedAbstract->addStaticRoute()
+#1 /home/linux/Documents/HyperAPI_PHP/vendor/nikic/fast-route/src/RouteCollector.php(44): FastRoute\DataGenerator\RegexBasedAbstract->addRoute()
+#2 /home/linux/Documents/HyperAPI_PHP/src/Core.php(43): FastRoute\RouteCollector->addRoute()
+#3 /home/linux/Documents/HyperAPI_PHP/vendor/nikic/fast-route/src/functions.php(25): HyperAPI\Core->{closure:HyperAPI\Core::run():40}()
+#4 /home/linux/Documents/HyperAPI_PHP/src/Core.php(40): FastRoute\simpleDispatcher()
+#5 /home/linux/Documents/HyperAPI_PHP/bin/server.php(21): HyperAPI\Core->run()
+#6 /home/linux/Documents/HyperAPI_PHP/vendor/workerman/workerman/src/Connection/TcpConnection.php(750): {closure:/home/linux/Documents/HyperAPI_PHP/bin/server.php:15}()
+#7 /home/linux/Documents/HyperAPI_PHP/vendor/workerman/workerman/src/Events/Select.php(406): Workerman\Connection\TcpConnection->baseRead()
+#8 /home/linux/Documents/HyperAPI_PHP/vendor/workerman/workerman/src/Worker.php(1756): Workerman\Events\Select->run()
+#9 /home/linux/Documents/HyperAPI_PHP/vendor/workerman/workerman/src/Worker.php(1552): Workerman\Worker::forkOneWorkerForLinux()
+#10 /home/linux/Documents/HyperAPI_PHP/vendor/workerman/workerman/src/Worker.php(1532): Workerman\Worker::forkWorkersForLinux()
+#11 /home/linux/Documents/HyperAPI_PHP/vendor/workerman/workerman/src/Worker.php(1901): Workerman\Worker::forkWorkers()
+#12 /home/linux/Documents/HyperAPI_PHP/vendor/workerman/workerman/src/Worker.php(1836): Workerman\Worker::monitorWorkersForLinux()
+#13 /home/linux/Documents/HyperAPI_PHP/vendor/workerman/workerman/src/Worker.php(603): Workerman\Worker::monitorWorkers()
+#14 /home/linux/Documents/HyperAPI_PHP/bin/server.php(26): Workerman\Worker::runAll()
+#15 {main}
+2025-10-19 10:26:59 pid:11922 worker[none:11932] exit with status 64000
+2025-10-19 10:26:59 pid:11922 worker[none:11933] exit with status 64000
+2025-10-19 10:26:59 pid:11922 worker[none:11934] exit with status 64000
+2025-10-19 10:27:12 pid:11922 Workerman[server.php] received signal SIGINT
+2025-10-19 10:27:12 pid:11922 Workerman[server.php] stopping
+2025-10-19 10:27:12 pid:11922 Workerman[server.php] has been stopped
+2025-10-19 10:27:16 pid:11961 Workerman[server.php] start in DEBUG mode
+2025-10-19 10:27:18 pid:11963 FastRoute\BadRouteException: Cannot register two routes matching "/not-found" for method "GET" in /home/linux/Documents/HyperAPI_PHP/vendor/nikic/fast-route/src/DataGenerator/RegexBasedAbstract.php:86
+Stack trace:
+#0 /home/linux/Documents/HyperAPI_PHP/vendor/nikic/fast-route/src/DataGenerator/RegexBasedAbstract.php(30): FastRoute\DataGenerator\RegexBasedAbstract->addStaticRoute()
+#1 /home/linux/Documents/HyperAPI_PHP/vendor/nikic/fast-route/src/RouteCollector.php(44): FastRoute\DataGenerator\RegexBasedAbstract->addRoute()
+#2 /home/linux/Documents/HyperAPI_PHP/src/Core.php(43): FastRoute\RouteCollector->addRoute()
+#3 /home/linux/Documents/HyperAPI_PHP/vendor/nikic/fast-route/src/functions.php(25): HyperAPI\Core->{closure:HyperAPI\Core::run():40}()
+#4 /home/linux/Documents/HyperAPI_PHP/src/Core.php(40): FastRoute\simpleDispatcher()
+#5 /home/linux/Documents/HyperAPI_PHP/bin/server.php(21): HyperAPI\Core->run()
+#6 /home/linux/Documents/HyperAPI_PHP/vendor/workerman/workerman/src/Connection/TcpConnection.php(750): {closure:/home/linux/Documents/HyperAPI_PHP/bin/server.php:15}()
+#7 /home/linux/Documents/HyperAPI_PHP/vendor/workerman/workerman/src/Events/Select.php(406): Workerman\Connection\TcpConnection->baseRead()
+#8 /home/linux/Documents/HyperAPI_PHP/vendor/workerman/workerman/src/Worker.php(1756): Workerman\Events\Select->run()
+#9 /home/linux/Documents/HyperAPI_PHP/vendor/workerman/workerman/src/Worker.php(1552): Workerman\Worker::forkOneWorkerForLinux()
+#10 /home/linux/Documents/HyperAPI_PHP/vendor/workerman/workerman/src/Worker.php(1532): Workerman\Worker::forkWorkersForLinux()
+#11 /home/linux/Documents/HyperAPI_PHP/vendor/workerman/workerman/src/Worker.php(601): Workerman\Worker::forkWorkers()
+#12 /home/linux/Documents/HyperAPI_PHP/bin/server.php(26): Workerman\Worker::runAll()
+#13 {main}
+2025-10-19 10:27:18 pid:11962 FastRoute\BadRouteException: Cannot register two routes matching "/not-found" for method "GET" in /home/linux/Documents/HyperAPI_PHP/vendor/nikic/fast-route/src/DataGenerator/RegexBasedAbstract.php:86
+Stack trace:
+#0 /home/linux/Documents/HyperAPI_PHP/vendor/nikic/fast-route/src/DataGenerator/RegexBasedAbstract.php(30): FastRoute\DataGenerator\RegexBasedAbstract->addStaticRoute()
+#1 /home/linux/Documents/HyperAPI_PHP/vendor/nikic/fast-route/src/RouteCollector.php(44): FastRoute\DataGenerator\RegexBasedAbstract->addRoute()
+#2 /home/linux/Documents/HyperAPI_PHP/src/Core.php(43): FastRoute\RouteCollector->addRoute()
+#3 /home/linux/Documents/HyperAPI_PHP/vendor/nikic/fast-route/src/functions.php(25): HyperAPI\Core->{closure:HyperAPI\Core::run():40}()
+#4 /home/linux/Documents/HyperAPI_PHP/src/Core.php(40): FastRoute\simpleDispatcher()
+#5 /home/linux/Documents/HyperAPI_PHP/bin/server.php(21): HyperAPI\Core->run()
+#6 /home/linux/Documents/HyperAPI_PHP/vendor/workerman/workerman/src/Connection/TcpConnection.php(750): {closure:/home/linux/Documents/HyperAPI_PHP/bin/server.php:15}()
+#7 /home/linux/Documents/HyperAPI_PHP/vendor/workerman/workerman/src/Events/Select.php(406): Workerman\Connection\TcpConnection->baseRead()
+#8 /home/linux/Documents/HyperAPI_PHP/vendor/workerman/workerman/src/Worker.php(1756): Workerman\Events\Select->run()
+#9 /home/linux/Documents/HyperAPI_PHP/vendor/workerman/workerman/src/Worker.php(1552): Workerman\Worker::forkOneWorkerForLinux()
+#10 /home/linux/Documents/HyperAPI_PHP/vendor/workerman/workerman/src/Worker.php(1532): Workerman\Worker::forkWorkersForLinux()
+#11 /home/linux/Documents/HyperAPI_PHP/vendor/workerman/workerman/src/Worker.php(601): Workerman\Worker::forkWorkers()
+#12 /home/linux/Documents/HyperAPI_PHP/bin/server.php(26): Workerman\Worker::runAll()
+#13 {main}
+2025-10-19 10:27:18 pid:11965 FastRoute\BadRouteException: Cannot register two routes matching "/not-found" for method "GET" in /home/linux/Documents/HyperAPI_PHP/vendor/nikic/fast-route/src/DataGenerator/RegexBasedAbstract.php:86
+Stack trace:
+#0 /home/linux/Documents/HyperAPI_PHP/vendor/nikic/fast-route/src/DataGenerator/RegexBasedAbstract.php(30): FastRoute\DataGenerator\RegexBasedAbstract->addStaticRoute()
+#1 /home/linux/Documents/HyperAPI_PHP/vendor/nikic/fast-route/src/RouteCollector.php(44): FastRoute\DataGenerator\RegexBasedAbstract->addRoute()
+#2 /home/linux/Documents/HyperAPI_PHP/src/Core.php(43): FastRoute\RouteCollector->addRoute()
+#3 /home/linux/Documents/HyperAPI_PHP/vendor/nikic/fast-route/src/functions.php(25): HyperAPI\Core->{closure:HyperAPI\Core::run():40}()
+#4 /home/linux/Documents/HyperAPI_PHP/src/Core.php(40): FastRoute\simpleDispatcher()
+#5 /home/linux/Documents/HyperAPI_PHP/bin/server.php(21): HyperAPI\Core->run()
+#6 /home/linux/Documents/HyperAPI_PHP/vendor/workerman/workerman/src/Connection/TcpConnection.php(750): {closure:/home/linux/Documents/HyperAPI_PHP/bin/server.php:15}()
+#7 /home/linux/Documents/HyperAPI_PHP/vendor/workerman/workerman/src/Events/Select.php(406): Workerman\Connection\TcpConnection->baseRead()
+#8 /home/linux/Documents/HyperAPI_PHP/vendor/workerman/workerman/src/Worker.php(1756): Workerman\Events\Select->run()
+#9 /home/linux/Documents/HyperAPI_PHP/vendor/workerman/workerman/src/Worker.php(1552): Workerman\Worker::forkOneWorkerForLinux()
+#10 /home/linux/Documents/HyperAPI_PHP/vendor/workerman/workerman/src/Worker.php(1532): Workerman\Worker::forkWorkersForLinux()
+#11 /home/linux/Documents/HyperAPI_PHP/vendor/workerman/workerman/src/Worker.php(601): Workerman\Worker::forkWorkers()
+#12 /home/linux/Documents/HyperAPI_PHP/bin/server.php(26): Workerman\Worker::runAll()
+#13 {main}
+2025-10-19 10:27:18 pid:11964 FastRoute\BadRouteException: Cannot register two routes matching "/not-found" for method "GET" in /home/linux/Documents/HyperAPI_PHP/vendor/nikic/fast-route/src/DataGenerator/RegexBasedAbstract.php:86
+Stack trace:
+#0 /home/linux/Documents/HyperAPI_PHP/vendor/nikic/fast-route/src/DataGenerator/RegexBasedAbstract.php(30): FastRoute\DataGenerator\RegexBasedAbstract->addStaticRoute()
+#1 /home/linux/Documents/HyperAPI_PHP/vendor/nikic/fast-route/src/RouteCollector.php(44): FastRoute\DataGenerator\RegexBasedAbstract->addRoute()
+#2 /home/linux/Documents/HyperAPI_PHP/src/Core.php(43): FastRoute\RouteCollector->addRoute()
+#3 /home/linux/Documents/HyperAPI_PHP/vendor/nikic/fast-route/src/functions.php(25): HyperAPI\Core->{closure:HyperAPI\Core::run():40}()
+#4 /home/linux/Documents/HyperAPI_PHP/src/Core.php(40): FastRoute\simpleDispatcher()
+#5 /home/linux/Documents/HyperAPI_PHP/bin/server.php(21): HyperAPI\Core->run()
+#6 /home/linux/Documents/HyperAPI_PHP/vendor/workerman/workerman/src/Connection/TcpConnection.php(750): {closure:/home/linux/Documents/HyperAPI_PHP/bin/server.php:15}()
+#7 /home/linux/Documents/HyperAPI_PHP/vendor/workerman/workerman/src/Events/Select.php(406): Workerman\Connection\TcpConnection->baseRead()
+#8 /home/linux/Documents/HyperAPI_PHP/vendor/workerman/workerman/src/Worker.php(1756): Workerman\Events\Select->run()
+#9 /home/linux/Documents/HyperAPI_PHP/vendor/workerman/workerman/src/Worker.php(1552): Workerman\Worker::forkOneWorkerForLinux()
+#10 /home/linux/Documents/HyperAPI_PHP/vendor/workerman/workerman/src/Worker.php(1532): Workerman\Worker::forkWorkersForLinux()
+#11 /home/linux/Documents/HyperAPI_PHP/vendor/workerman/workerman/src/Worker.php(601): Workerman\Worker::forkWorkers()
+#12 /home/linux/Documents/HyperAPI_PHP/bin/server.php(26): Workerman\Worker::runAll()
+#13 {main}
+2025-10-19 10:27:18 pid:11961 worker[none:11963] exit with status 64000
+2025-10-19 10:27:18 pid:11966 FastRoute\BadRouteException: Cannot register two routes matching "/not-found" for method "GET" in /home/linux/Documents/HyperAPI_PHP/vendor/nikic/fast-route/src/DataGenerator/RegexBasedAbstract.php:86
+Stack trace:
+#0 /home/linux/Documents/HyperAPI_PHP/vendor/nikic/fast-route/src/DataGenerator/RegexBasedAbstract.php(30): FastRoute\DataGenerator\RegexBasedAbstract->addStaticRoute()
+#1 /home/linux/Documents/HyperAPI_PHP/vendor/nikic/fast-route/src/RouteCollector.php(44): FastRoute\DataGenerator\RegexBasedAbstract->addRoute()
+#2 /home/linux/Documents/HyperAPI_PHP/src/Core.php(43): FastRoute\RouteCollector->addRoute()
+#3 /home/linux/Documents/HyperAPI_PHP/vendor/nikic/fast-route/src/functions.php(25): HyperAPI\Core->{closure:HyperAPI\Core::run():40}()
+#4 /home/linux/Documents/HyperAPI_PHP/src/Core.php(40): FastRoute\simpleDispatcher()
+#5 /home/linux/Documents/HyperAPI_PHP/bin/server.php(21): HyperAPI\Core->run()
+#6 /home/linux/Documents/HyperAPI_PHP/vendor/workerman/workerman/src/Connection/TcpConnection.php(750): {closure:/home/linux/Documents/HyperAPI_PHP/bin/server.php:15}()
+#7 /home/linux/Documents/HyperAPI_PHP/vendor/workerman/workerman/src/Events/Select.php(406): Workerman\Connection\TcpConnection->baseRead()
+#8 /home/linux/Documents/HyperAPI_PHP/vendor/workerman/workerman/src/Worker.php(1756): Workerman\Events\Select->run()
+#9 /home/linux/Documents/HyperAPI_PHP/vendor/workerman/workerman/src/Worker.php(1552): Workerman\Worker::forkOneWorkerForLinux()
+#10 /home/linux/Documents/HyperAPI_PHP/vendor/workerman/workerman/src/Worker.php(1532): Workerman\Worker::forkWorkersForLinux()
+#11 /home/linux/Documents/HyperAPI_PHP/vendor/workerman/workerman/src/Worker.php(1901): Workerman\Worker::forkWorkers()
+#12 /home/linux/Documents/HyperAPI_PHP/vendor/workerman/workerman/src/Worker.php(1836): Workerman\Worker::monitorWorkersForLinux()
+#13 /home/linux/Documents/HyperAPI_PHP/vendor/workerman/workerman/src/Worker.php(603): Workerman\Worker::monitorWorkers()
+#14 /home/linux/Documents/HyperAPI_PHP/bin/server.php(26): Workerman\Worker::runAll()
+#15 {main}
+2025-10-19 10:27:18 pid:11961 worker[none:11964] exit with status 64000
+2025-10-19 10:27:18 pid:11961 worker[none:11962] exit with status 64000
+2025-10-19 10:27:18 pid:11961 worker[none:11965] exit with status 64000
+2025-10-19 10:27:18 pid:11967 FastRoute\BadRouteException: Cannot register two routes matching "/not-found" for method "GET" in /home/linux/Documents/HyperAPI_PHP/vendor/nikic/fast-route/src/DataGenerator/RegexBasedAbstract.php:86
+Stack trace:
+#0 /home/linux/Documents/HyperAPI_PHP/vendor/nikic/fast-route/src/DataGenerator/RegexBasedAbstract.php(30): FastRoute\DataGenerator\RegexBasedAbstract->addStaticRoute()
+#1 /home/linux/Documents/HyperAPI_PHP/vendor/nikic/fast-route/src/RouteCollector.php(44): FastRoute\DataGenerator\RegexBasedAbstract->addRoute()
+#2 /home/linux/Documents/HyperAPI_PHP/src/Core.php(43): FastRoute\RouteCollector->addRoute()
+#3 /home/linux/Documents/HyperAPI_PHP/vendor/nikic/fast-route/src/functions.php(25): HyperAPI\Core->{closure:HyperAPI\Core::run():40}()
+#4 /home/linux/Documents/HyperAPI_PHP/src/Core.php(40): FastRoute\simpleDispatcher()
+#5 /home/linux/Documents/HyperAPI_PHP/bin/server.php(21): HyperAPI\Core->run()
+#6 /home/linux/Documents/HyperAPI_PHP/vendor/workerman/workerman/src/Connection/TcpConnection.php(750): {closure:/home/linux/Documents/HyperAPI_PHP/bin/server.php:15}()
+#7 /home/linux/Documents/HyperAPI_PHP/vendor/workerman/workerman/src/Events/Select.php(406): Workerman\Connection\TcpConnection->baseRead()
+#8 /home/linux/Documents/HyperAPI_PHP/vendor/workerman/workerman/src/Worker.php(1756): Workerman\Events\Select->run()
+#9 /home/linux/Documents/HyperAPI_PHP/vendor/workerman/workerman/src/Worker.php(1552): Workerman\Worker::forkOneWorkerForLinux()
+#10 /home/linux/Documents/HyperAPI_PHP/vendor/workerman/workerman/src/Worker.php(1532): Workerman\Worker::forkWorkersForLinux()
+#11 /home/linux/Documents/HyperAPI_PHP/vendor/workerman/workerman/src/Worker.php(1901): Workerman\Worker::forkWorkers()
+#12 /home/linux/Documents/HyperAPI_PHP/vendor/workerman/workerman/src/Worker.php(1836): Workerman\Worker::monitorWorkersForLinux()
+#13 /home/linux/Documents/HyperAPI_PHP/vendor/workerman/workerman/src/Worker.php(603): Workerman\Worker::monitorWorkers()
+#14 /home/linux/Documents/HyperAPI_PHP/bin/server.php(26): Workerman\Worker::runAll()
+#15 {main}
+2025-10-19 10:27:18 pid:11968 FastRoute\BadRouteException: Cannot register two routes matching "/not-found" for method "GET" in /home/linux/Documents/HyperAPI_PHP/vendor/nikic/fast-route/src/DataGenerator/RegexBasedAbstract.php:86
+Stack trace:
+#0 /home/linux/Documents/HyperAPI_PHP/vendor/nikic/fast-route/src/DataGenerator/RegexBasedAbstract.php(30): FastRoute\DataGenerator\RegexBasedAbstract->addStaticRoute()
+#1 /home/linux/Documents/HyperAPI_PHP/vendor/nikic/fast-route/src/RouteCollector.php(44): FastRoute\DataGenerator\RegexBasedAbstract->addRoute()
+#2 /home/linux/Documents/HyperAPI_PHP/src/Core.php(43): FastRoute\RouteCollector->addRoute()
+#3 /home/linux/Documents/HyperAPI_PHP/vendor/nikic/fast-route/src/functions.php(25): HyperAPI\Core->{closure:HyperAPI\Core::run():40}()
+#4 /home/linux/Documents/HyperAPI_PHP/src/Core.php(40): FastRoute\simpleDispatcher()
+#5 /home/linux/Documents/HyperAPI_PHP/bin/server.php(21): HyperAPI\Core->run()
+#6 /home/linux/Documents/HyperAPI_PHP/vendor/workerman/workerman/src/Connection/TcpConnection.php(750): {closure:/home/linux/Documents/HyperAPI_PHP/bin/server.php:15}()
+#7 /home/linux/Documents/HyperAPI_PHP/vendor/workerman/workerman/src/Events/Select.php(406): Workerman\Connection\TcpConnection->baseRead()
+#8 /home/linux/Documents/HyperAPI_PHP/vendor/workerman/workerman/src/Worker.php(1756): Workerman\Events\Select->run()
+#9 /home/linux/Documents/HyperAPI_PHP/vendor/workerman/workerman/src/Worker.php(1552): Workerman\Worker::forkOneWorkerForLinux()
+#10 /home/linux/Documents/HyperAPI_PHP/vendor/workerman/workerman/src/Worker.php(1532): Workerman\Worker::forkWorkersForLinux()
+#11 /home/linux/Documents/HyperAPI_PHP/vendor/workerman/workerman/src/Worker.php(1901): Workerman\Worker::forkWorkers()
+#12 /home/linux/Documents/HyperAPI_PHP/vendor/workerman/workerman/src/Worker.php(1836): Workerman\Worker::monitorWorkersForLinux()
+#13 /home/linux/Documents/HyperAPI_PHP/vendor/workerman/workerman/src/Worker.php(603): Workerman\Worker::monitorWorkers()
+#14 /home/linux/Documents/HyperAPI_PHP/bin/server.php(26): Workerman\Worker::runAll()
+#15 {main}
+2025-10-19 10:27:18 pid:11969 FastRoute\BadRouteException: Cannot register two routes matching "/not-found" for method "GET" in /home/linux/Documents/HyperAPI_PHP/vendor/nikic/fast-route/src/DataGenerator/RegexBasedAbstract.php:86
+Stack trace:
+#0 /home/linux/Documents/HyperAPI_PHP/vendor/nikic/fast-route/src/DataGenerator/RegexBasedAbstract.php(30): FastRoute\DataGenerator\RegexBasedAbstract->addStaticRoute()
+#1 /home/linux/Documents/HyperAPI_PHP/vendor/nikic/fast-route/src/RouteCollector.php(44): FastRoute\DataGenerator\RegexBasedAbstract->addRoute()
+#2 /home/linux/Documents/HyperAPI_PHP/src/Core.php(43): FastRoute\RouteCollector->addRoute()
+#3 /home/linux/Documents/HyperAPI_PHP/vendor/nikic/fast-route/src/functions.php(25): HyperAPI\Core->{closure:HyperAPI\Core::run():40}()
+#4 /home/linux/Documents/HyperAPI_PHP/src/Core.php(40): FastRoute\simpleDispatcher()
+#5 /home/linux/Documents/HyperAPI_PHP/bin/server.php(21): HyperAPI\Core->run()
+#6 /home/linux/Documents/HyperAPI_PHP/vendor/workerman/workerman/src/Connection/TcpConnection.php(750): {closure:/home/linux/Documents/HyperAPI_PHP/bin/server.php:15}()
+#7 /home/linux/Documents/HyperAPI_PHP/vendor/workerman/workerman/src/Events/Select.php(406): Workerman\Connection\TcpConnection->baseRead()
+#8 /home/linux/Documents/HyperAPI_PHP/vendor/workerman/workerman/src/Worker.php(1756): Workerman\Events\Select->run()
+#9 /home/linux/Documents/HyperAPI_PHP/vendor/workerman/workerman/src/Worker.php(1552): Workerman\Worker::forkOneWorkerForLinux()
+#10 /home/linux/Documents/HyperAPI_PHP/vendor/workerman/workerman/src/Worker.php(1532): Workerman\Worker::forkWorkersForLinux()
+#11 /home/linux/Documents/HyperAPI_PHP/vendor/workerman/workerman/src/Worker.php(1901): Workerman\Worker::forkWorkers()
+#12 /home/linux/Documents/HyperAPI_PHP/vendor/workerman/workerman/src/Worker.php(1836): Workerman\Worker::monitorWorkersForLinux()
+#13 /home/linux/Documents/HyperAPI_PHP/vendor/workerman/workerman/src/Worker.php(603): Workerman\Worker::monitorWorkers()
+#14 /home/linux/Documents/HyperAPI_PHP/bin/server.php(26): Workerman\Worker::runAll()
+#15 {main}
+2025-10-19 10:27:18 pid:11961 worker[none:11966] exit with status 64000
+2025-10-19 10:27:18 pid:11961 worker[none:11968] exit with status 64000
+2025-10-19 10:27:18 pid:11961 worker[none:11967] exit with status 64000
+2025-10-19 10:27:18 pid:11970 FastRoute\BadRouteException: Cannot register two routes matching "/not-found" for method "GET" in /home/linux/Documents/HyperAPI_PHP/vendor/nikic/fast-route/src/DataGenerator/RegexBasedAbstract.php:86
+Stack trace:
+#0 /home/linux/Documents/HyperAPI_PHP/vendor/nikic/fast-route/src/DataGenerator/RegexBasedAbstract.php(30): FastRoute\DataGenerator\RegexBasedAbstract->addStaticRoute()
+#1 /home/linux/Documents/HyperAPI_PHP/vendor/nikic/fast-route/src/RouteCollector.php(44): FastRoute\DataGenerator\RegexBasedAbstract->addRoute()
+#2 /home/linux/Documents/HyperAPI_PHP/src/Core.php(43): FastRoute\RouteCollector->addRoute()
+#3 /home/linux/Documents/HyperAPI_PHP/vendor/nikic/fast-route/src/functions.php(25): HyperAPI\Core->{closure:HyperAPI\Core::run():40}()
+#4 /home/linux/Documents/HyperAPI_PHP/src/Core.php(40): FastRoute\simpleDispatcher()
+#5 /home/linux/Documents/HyperAPI_PHP/bin/server.php(21): HyperAPI\Core->run()
+#6 /home/linux/Documents/HyperAPI_PHP/vendor/workerman/workerman/src/Connection/TcpConnection.php(750): {closure:/home/linux/Documents/HyperAPI_PHP/bin/server.php:15}()
+#7 /home/linux/Documents/HyperAPI_PHP/vendor/workerman/workerman/src/Events/Select.php(406): Workerman\Connection\TcpConnection->baseRead()
+#8 /home/linux/Documents/HyperAPI_PHP/vendor/workerman/workerman/src/Worker.php(1756): Workerman\Events\Select->run()
+#9 /home/linux/Documents/HyperAPI_PHP/vendor/workerman/workerman/src/Worker.php(1552): Workerman\Worker::forkOneWorkerForLinux()
+#10 /home/linux/Documents/HyperAPI_PHP/vendor/workerman/workerman/src/Worker.php(1532): Workerman\Worker::forkWorkersForLinux()
+#11 /home/linux/Documents/HyperAPI_PHP/vendor/workerman/workerman/src/Worker.php(1901): Workerman\Worker::forkWorkers()
+#12 /home/linux/Documents/HyperAPI_PHP/vendor/workerman/workerman/src/Worker.php(1836): Workerman\Worker::monitorWorkersForLinux()
+#13 /home/linux/Documents/HyperAPI_PHP/vendor/workerman/workerman/src/Worker.php(603): Workerman\Worker::monitorWorkers()
+#14 /home/linux/Documents/HyperAPI_PHP/bin/server.php(26): Workerman\Worker::runAll()
+#15 {main}
+2025-10-19 10:27:18 pid:11961 worker[none:11969] exit with status 64000
+2025-10-19 10:27:18 pid:11971 FastRoute\BadRouteException: Cannot register two routes matching "/not-found" for method "GET" in /home/linux/Documents/HyperAPI_PHP/vendor/nikic/fast-route/src/DataGenerator/RegexBasedAbstract.php:86
+Stack trace:
+#0 /home/linux/Documents/HyperAPI_PHP/vendor/nikic/fast-route/src/DataGenerator/RegexBasedAbstract.php(30): FastRoute\DataGenerator\RegexBasedAbstract->addStaticRoute()
+#1 /home/linux/Documents/HyperAPI_PHP/vendor/nikic/fast-route/src/RouteCollector.php(44): FastRoute\DataGenerator\RegexBasedAbstract->addRoute()
+#2 /home/linux/Documents/HyperAPI_PHP/src/Core.php(43): FastRoute\RouteCollector->addRoute()
+#3 /home/linux/Documents/HyperAPI_PHP/vendor/nikic/fast-route/src/functions.php(25): HyperAPI\Core->{closure:HyperAPI\Core::run():40}()
+#4 /home/linux/Documents/HyperAPI_PHP/src/Core.php(40): FastRoute\simpleDispatcher()
+#5 /home/linux/Documents/HyperAPI_PHP/bin/server.php(21): HyperAPI\Core->run()
+#6 /home/linux/Documents/HyperAPI_PHP/vendor/workerman/workerman/src/Connection/TcpConnection.php(750): {closure:/home/linux/Documents/HyperAPI_PHP/bin/server.php:15}()
+#7 /home/linux/Documents/HyperAPI_PHP/vendor/workerman/workerman/src/Events/Select.php(406): Workerman\Connection\TcpConnection->baseRead()
+#8 /home/linux/Documents/HyperAPI_PHP/vendor/workerman/workerman/src/Worker.php(1756): Workerman\Events\Select->run()
+#9 /home/linux/Documents/HyperAPI_PHP/vendor/workerman/workerman/src/Worker.php(1552): Workerman\Worker::forkOneWorkerForLinux()
+#10 /home/linux/Documents/HyperAPI_PHP/vendor/workerman/workerman/src/Worker.php(1532): Workerman\Worker::forkWorkersForLinux()
+#11 /home/linux/Documents/HyperAPI_PHP/vendor/workerman/workerman/src/Worker.php(1901): Workerman\Worker::forkWorkers()
+#12 /home/linux/Documents/HyperAPI_PHP/vendor/workerman/workerman/src/Worker.php(1836): Workerman\Worker::monitorWorkersForLinux()
+#13 /home/linux/Documents/HyperAPI_PHP/vendor/workerman/workerman/src/Worker.php(603): Workerman\Worker::monitorWorkers()
+#14 /home/linux/Documents/HyperAPI_PHP/bin/server.php(26): Workerman\Worker::runAll()
+#15 {main}
+2025-10-19 10:27:18 pid:11961 worker[none:11970] exit with status 64000
+2025-10-19 10:27:18 pid:11961 worker[none:11971] exit with status 64000
+2025-10-19 10:27:36 pid:11961 Workerman[server.php] received signal SIGINT
+2025-10-19 10:27:36 pid:11961 Workerman[server.php] stopping
+2025-10-19 10:27:36 pid:11961 Workerman[server.php] has been stopped
+2025-10-19 10:27:56 pid:12010 Workerman[server.php] start in DEBUG mode
+2025-10-19 10:29:23 pid:12083 Workerman[server.php] start in DEBUG mode
+2025-10-19 10:29:23 pid:12083 Workerman[server.php] already running
+2025-10-19 10:29:36 pid:12010 Workerman[server.php] received signal SIGTERM
+2025-10-19 10:29:36 pid:12010 Workerman[server.php] stopping
+2025-10-19 10:29:36 pid:12010 Workerman[server.php] has been stopped
+2025-10-19 10:29:44 pid:12098 Workerman[server.php] start in DEBUG mode

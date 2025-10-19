@@ -4,8 +4,10 @@ require __DIR__ . '/../vendor/autoload.php';
 
 use Workerman\Worker;
 
+// Cargar la configuración y rutas desde app.php
+$app = require __DIR__ . '/../app.php';
+
 $port = $argv[1] ?? 8080;
-$app = require __DIR__ . '/../examples/routes.php';
 
 $worker = new Worker("http://0.0.0.0:$port");
 $worker->count = 4;
