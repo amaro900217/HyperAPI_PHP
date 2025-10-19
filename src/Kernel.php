@@ -4,7 +4,7 @@ namespace HyperAPI;
 use FastRoute\Dispatcher;
 use FastRoute\RouteCollector;
 
-class Core {
+class Kernel {
     private array $before=[];
     private array $after=[];
     private array $addons=[];

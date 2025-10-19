@@ -2,12 +2,12 @@
 
 require_once __DIR__ . '/vendor/autoload.php';
 
-use HyperAPI\Core;
+use HyperAPI\Kernel;
 use HyperAPI\Request;
 use HyperAPI\Response;
 
 // Inicializar el framework HyperAPI
-$app = new Core();
+$app = new Kernel();
 
 // -----------------------------
 // RUTAS BÁSICAS (ejemplos simples)
@@ -15,7 +15,7 @@ $app = new Core();
 
 // Ruta GET básica
 $app->get('/', function(Request $req, Response $res) {
-    return $res->html('<h1>Bienvenido a HyperAPI!</h1><p>Framework minimalista para APIs y HTML.</p>');
+    return $res->html('<h3>Hello World!! (Backend)</h3>');
 });
 
 // Ruta GET con parámetro nombrado (ej. /user/123)
