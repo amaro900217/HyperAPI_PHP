@@ -1,4 +1,7 @@
 <?php
+
+// src/Request.php
+
 namespace HyperAPI;
 
 class Request {

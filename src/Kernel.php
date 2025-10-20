@@ -1,4 +1,7 @@
 <?php
+
+// src/kernel.php
+
 namespace HyperAPI;
 
 use FastRoute\Dispatcher;

@@ -2,37 +2,41 @@
 
 **Ultra-light PHP microframework for hypermedia APIs and HTML fragments.**
 
-HyperAPI is designed to be **minimal, fast, and flexible**, perfect for building:
+HyperAPI is designed to be **minimal, fast, and flexible**, ideal for building:
 
-- REST or hypermedia APIs
-- Hypermedia Systems that use HTML fragments
-- Microservices
+* REST APIs for Hypermedia systems using HTML fragments
+* Microservices
+
+---
 
 ## 🚀 Features
 
-- **Minimal core**: Only 3 classes (`Kernel`, `Request`, `Response`)
-- **Middleware**: Before and after route processing
-- **Named parameters**: Routes like `/tasks/{id}/toggle`
-- **Plugin support**: Addon system for extensibility
-- **Response objects**: HTML and JSON responses
-- **PHP >= 8.0** compatibility
-- **Dual mode**: Traditional web server or FAST CLI/Workerman
+* **Minimal core**: Only 3 classes (`Kernel`, `Request`, `Response`)
+* **Middleware**: Before and after route processing
+* **Named parameters**: Routes like `/tasks/{id}/toggle`
+* **Addon support**: Load custom plugins from `addons/`
+* **Response objects**: HTML and JSON
+* **PHP >= 8.0** compatible
+* **Dual mode**: Traditional FPM/Apache or Workerman CLI server
+
+---
 
 ## 📋 Requirements
 
-- **PHP >= 8.0**
-- **Composer** (for dependency management)
+* PHP >= 8.0
+* Composer
+
+---
 
 ## 🛠️ Installation
 
 ```bash
-# Clone the repository
-git clone <repository-url>
-cd hyperapi_php
-
-# Install dependencies
+git clone https://github.com/amaro900217/HyperAPI_PHP.git
+cd HyperAPI_PHP
 composer install
 ```
+
+---
 
 ## 💡 Usage
 
@@ -47,7 +51,6 @@ $app = new Kernel();
 
 // Define a route
 $app->get('/api/tasks', function(Request $req, Response $res) {
-    // Your API logic here
     return $res->json(['tasks' => []]);
 });
 
@@ -58,109 +61,109 @@ $app->run();
 ### Middleware
 
 ```php
-// Before middleware (runs before route handler)
+// Runs before route handler
 $app->before(function() {
     header('Access-Control-Allow-Origin: *');
 });
 
-// After middleware (runs after route handler)
-$app->after(function($req, $res) {
-    // Post-processing logic
+// Runs after route handler
+$app->after(function(Request $req, Response $res) {
+    // Post-processing
 });
 ```
 
-### Plugins/Addons
+### Addons
 
 ```php
-// Load custom addon
 $app->useAddon('my_addon'); // loads addons/my_addon.php
 ```
+
+---
 
 ## 🏗️ Architecture
 
 ### Core Classes
 
-- **`Kernel`**: Main application framework
-- **`Request`**: HTTP request wrapper with utilities
-- **`Response`**: HTTP response builder for HTML/JSON
+* **`Kernel`**: Main framework
+* **`Request`**: HTTP request wrapper
+* **`Response`**: HTTP response builder
 
 ### Routing
 
 ```php
-// GET routes
 $app->get('/path', $handler);
-
-// POST routes
 $app->post('/path', $handler);
-
-// PUT/PATCH routes
-$app->put('/path/{id}', $handler);
-
-// DELETE routes
-$app->delete('/path/{id}', $handler);
 ```
+
+---
 
 ## 🌐 Server Modes
 
-### Traditional Mode
+### Traditional (FPM / PHP Built-in)
 
 ```bash
-# Using built-in PHP server
 php -S localhost:8080 -t public
 ```
 
-### Workerman Mode (High Performance)
+### Workerman (High Performance CLI)
 
 ```bash
-# Start Workerman server
-php bin/server.php start
-
-# Or run as daemon
-php bin/server.php start -d
-
-# Management commands
-php bin/server.php stop|restart|status
+php public/api/index.php start      # foreground
+php public/api/index.php start -d   # daemon
+php public/api/index.php stop|restart|status
 ```
 
-## ⚙️ Configuration
+* Serves both API (`/api`) and static assets from `public/`
+* Configurable cache headers via `conf.php`
 
-Configure via `conf.php`:
+---
+
+## ⚙️ Configuration (`conf.php`)
 
 ```php
 <?php
 return [
-    'backend_server' => [
+    'api_url_prefix' => '/api',
+    'app_entrypoint' => __DIR__ . '/app.php',
+    'public_path'    => __DIR__ . '/public',
+    'log_file'       => '/dev/null', // ENABLE IT: __DIR__ . '/bin/workerman.server.log'
+    'pid_file'       => '/dev/null', // ENABLE IT: __DIR__ . '/bin/workerman.server.pid'
+    'workerman_server' => [
         'workers' => 4,
         'host' => '0.0.0.0',
         'port' => 8080,
     ],
-    'frontend_server' => [
-        'workers' => 2,
-        'host' => '0.0.0.0',
-        'port' => 8081,
-        'public_path' => __DIR__ . '/public',
-    ],
+    'static_cache_control' => 'public,max-age=3600', 
 ];
 ```
+
+* `static_cache_control` applies to JS, CSS, images, and HTML served (only via Workerman)
+* `api_url_prefix` defines the API routes prefix
+
+---
 
 ## 📁 Project Structure
 
 ```
 hyperapi_php/
-├── src/                  # Framework core
-│   ├── Kerenel.php       # Main framework class
-│   ├── Request.php       # Request handling
-│   └── Response.php      # Response building
-├── bin/                  # Executables
-│   └── server.php        # Workerman server
-├── public/               # Public folder
-│   ├── index.php         # FPM entry point
+├── src/                  # Core framework
+│   ├── Kernel.php        # Main class
+│   ├── Request.php       # Request wrapper
+│   └── Response.php      # Response builder
+├── bin/                  # CLI entry points
+│   ├── cli.php           # Workerman server
+│   └── web.php           # FPM/Web entry point
+├── public/               # Public assets
+│   ├── api/index.php     # API entry point
 │   └── index.html        # Client page
 ├── conf.php              # Configuration
-├── app.php               # Application routes (example)
-└── composer.json         # Dependencies
+├── app.php               # Application routes/examples
+└── composer.json         # Composer dependencies
 ```
+
+---
 
 ## 📝 License
 
-MIT License - see LICENSE file for details.
+MIT License - see LICENSE file.
+
