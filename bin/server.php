@@ -6,11 +6,14 @@ use Workerman\Worker;
 use Workerman\Protocols\Http\Request;
 use Workerman\Protocols\Http\Response;
 
-$config = require __DIR__ . '/../conf.php';
-$app = require __DIR__ . '/../app.php';
+$conf = require __DIR__ . '/../conf.php';
+$app = require $conf['app_entrypoint'];
 
-$apiWorker = new Worker("http://{$config['backend_server']['host']}:{$config['backend_server']['port']}");
-$apiWorker->count = $config['backend_server']['workers'];
+Worker::$logFile = $conf['log_file'];
+Worker::$pidFile = $conf['pid_file'];
+
+$apiWorker = new Worker("http://{$conf['backend_server']['host']}:{$conf['backend_server']['port']}");
+$apiWorker->count = $conf['backend_server']['workers'];
 $apiWorker->name = 'backend';
 $apiWorker->onMessage = function($connection, $request) use ($app){
     $_SERVER['REQUEST_URI'] = $request->path();
@@ -23,12 +26,12 @@ $apiWorker->onMessage = function($connection, $request) use ($app){
     $connection->send($content);
 };
 
-$staticWorker = new Worker("http://{$config['frontend_server']['host']}:{$config['frontend_server']['port']}");
-$staticWorker->count = $config['frontend_server']['workers'];
+$staticWorker = new Worker("http://{$conf['frontend_server']['host']}:{$conf['frontend_server']['port']}");
+$staticWorker->count = $conf['frontend_server']['workers'];
 $staticWorker->name = 'frontend';
-$staticWorker->onMessage = function($connection, Request $request) use ($config) {
+$staticWorker->onMessage = function($connection, Request $request) use ($conf) {
     $path = $request->path();
-    $publicPath = $config['frontend_server']['public_path'];
+    $publicPath = $conf['public_path'];
     $normalizedPath = $path === '/' ? '' : $path;
     if ($normalizedPath === '' || is_dir($publicPath . $normalizedPath)) {
         $indexFile = $publicPath . $normalizedPath . '/index.html';
