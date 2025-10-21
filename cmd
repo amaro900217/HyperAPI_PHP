@@ -35,7 +35,7 @@ for ($i = 1; $i < $argc; $i++) {
 
 // Mostrar ayuda
 if ($options['help']) {
-    echo "Uso: php hyperapi [--help] [--serve-web] [--serve-cli] [--benchmark URL]\n";
+    echo "Uso: php cmd [--help] [--serve-web] [--serve-cli] [--benchmark URL]\n";
     echo "--help       Muestra este mensaje de ayuda.\n";
     echo "--serve-web  Inicia el servidor WEB en http://0.0.0.0:8080.\n";
     echo "--serve-cli  Inicia el servidor CLI en http://0.0.0.0:8080.\n";
@@ -102,5 +102,5 @@ if ($options['benchmark']) {
 }
 
 // Si no se pasa ninguna opción
-echo "Uso: php hyperapi [--help] [--serve-web] [--serve-cli] [--benchmark URL]\n";
+echo "Uso: php cmd [--help] [--serve-web] [--serve-cli] [--benchmark URL]\n";
 
