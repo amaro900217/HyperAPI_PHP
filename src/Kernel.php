@@ -31,7 +31,7 @@ class Kernel {
     public function before(callable $fn) { $this->before[]=$fn; }
     public function after(callable $fn) { $this->after[]=$fn; }
     public function useAddon(string $name) {
-        $file = __DIR__.'/../addons/'.$name.'.php';
+        $file = __DIR__.'/Addons/'.$name.'.php';
         if(file_exists($file)) $this->addons[$name]=require $file;
     }
 

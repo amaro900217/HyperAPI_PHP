@@ -2,7 +2,7 @@
 
 // public/api/index.php
 
-$conf = require __DIR__ . '/../../app/conf.php';
+$conf = require __DIR__ . '/../../src/Conf.php';
 require __DIR__ . '/../../vendor/autoload.php';
 
 use HyperAPI\ServerCli;

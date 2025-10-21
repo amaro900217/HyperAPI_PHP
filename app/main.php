@@ -19,7 +19,7 @@ $app->get('/api', function(Request $req, Response $res) {
 });
 
 $app->get('/api/user/{id}', function(Request $req, Response $res) {
-    $id = $req->param('id');  // Obtener parámetro de la URL
+    $id = $req->param('id');
     return $res->json(['user_id' => $id, 'message' => 'Usuario encontrado']);
 });
 
@@ -37,8 +37,8 @@ $app->get('/api/not-found', function(Request $req, Response $res) {
 // -----------------------------
 
 $app->before(function() {
-    header('Access-Control-Allow-Origin: *');  // Permitir CORS
-    header('X-Powered-By: HyperAPI');  // Header custom
+    // header('Access-Control-Allow-Origin: *');  // Permitir CORS
+    // header('X-Powered-By: HyperAPI');  // Header custom
 });
 
 $app->after(function(Request $req, Response $res) {
