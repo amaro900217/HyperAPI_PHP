@@ -6,6 +6,7 @@ $options = [
     'serve-web' => false,
     'serve-cli' => false,
     'benchmark' => null,
+    'new' => null,
 ];
 
 // Parsear argumentos simples
@@ -30,16 +31,60 @@ for ($i = 1; $i < $argc; $i++) {
                 $options['benchmark'] = 'http://0.0.0.0:8080';
             }
             break;
+        case '--new':
+            $next = $argv[$i + 1] ?? null;
+            if (!$next || str_starts_with($next, '--')) {
+                echo "Error: debes indicar la carpeta de destino para el skeleton.\n";
+                exit(1);
+            }
+            $options['new'] = $next;
+            $i++;
+            break;
     }
 }
 
 // Mostrar ayuda
 if ($options['help']) {
-    echo "Uso: php cmd [--help] [--serve-web] [--serve-cli] [--benchmark URL]\n";
-    echo "--help       Muestra este mensaje de ayuda.\n";
-    echo "--serve-web  Inicia el servidor WEB en http://0.0.0.0:8080.\n";
-    echo "--serve-cli  Inicia el servidor CLI en http://0.0.0.0:8080.\n";
-    echo "--benchmark  Ejecuta benchmark con hey (Linux/macOS/Windows). Se puede pasar URL opcional.\n";
+    echo <<<HELP
+Uso: php cmd [--help] [--serve-web] [--serve-cli] [--benchmark URL] [--new DIR]
+
+--help           Muestra este mensaje de ayuda.
+--serve-web      Inicia el servidor WEB en http://0.0.0.0:8080.
+--serve-cli      Inicia el servidor CLI en http://0.0.0.0:8080.
+--benchmark URL  Ejecuta benchmark con hey (Linux/macOS/Windows). URL opcional.
+--new DIR        Crea un nuevo proyecto HyperAPI en la carpeta DIR a partir de un skeleton.
+
+HELP;
+    exit;
+}
+
+// Crear skeleton
+if ($options['new']) {
+    $zipPath = __DIR__ . '/dev/skeleton/HyperAPI_PHP.zip';
+    $destDir = rtrim($options['new'], '/');
+
+    if (!file_exists($zipPath)) {
+        echo "Error: no se encontró el skeleton en $zipPath\n";
+        exit(1);
+    }
+
+    if (!is_dir($destDir)) {
+        if (!mkdir($destDir, 0755, true)) {
+            echo "Error: no se pudo crear la carpeta $destDir\n";
+            exit(1);
+        }
+    }
+
+    $zip = new ZipArchive();
+    if ($zip->open($zipPath) === true) {
+        $zip->extractTo($destDir);
+        $zip->close();
+        echo "Skeleton extraído correctamente en $destDir\n";
+    } else {
+        echo "Error: no se pudo abrir el ZIP del skeleton.\n";
+        exit(1);
+    }
+
     exit;
 }
 
@@ -102,5 +147,4 @@ if ($options['benchmark']) {
 }
 
 // Si no se pasa ninguna opción
-echo "Uso: php cmd [--help] [--serve-web] [--serve-cli] [--benchmark URL]\n";
-
+echo "Uso: php cmd [--help] [--serve-web] [--serve-cli] [--benchmark URL] [--new DIR]\n";
