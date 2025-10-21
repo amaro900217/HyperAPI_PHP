@@ -2,17 +2,14 @@
 
 // public/api/index.php
 
-$conf = require __DIR__ . '/../../conf.php';
+$conf = require __DIR__ . '/../../app/conf.php';
+require __DIR__ . '/../../vendor/autoload.php';
+
+use HyperAPI\ServerCli;
+use HyperAPI\ServerWeb;
 
 if (php_sapi_name() === 'cli') {
-    $binEntry = __DIR__ . '/../../bin/cli.php';
+    (new ServerCli($conf))->run();
 } else {
-    $binEntry = __DIR__ . '/../../bin/web.php';
+    (new ServerWeb($conf))->run();
 }
-
-if (!file_exists($binEntry)) {
-    http_response_code(500);
-    exit('Entry point not found.');
-}
-
-require $binEntry;

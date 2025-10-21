@@ -1,8 +1,8 @@
 <?php
 
-// app.php
+// app/main.php
 
-require_once __DIR__ . '/vendor/autoload.php';
+require_once __DIR__ . '/../vendor/autoload.php';
 
 use HyperAPI\Kernel;
 use HyperAPI\Request;
@@ -42,7 +42,7 @@ $app->before(function() {
 });
 
 $app->after(function(Request $req, Response $res) {
-    file_put_contents('log.txt', $_SERVER['REQUEST_URI'] . "\n", FILE_APPEND);
+    // file_put_contents('log.txt', $_SERVER['REQUEST_URI'] . "\n", FILE_APPEND);
 });
 
 // -----------------------------

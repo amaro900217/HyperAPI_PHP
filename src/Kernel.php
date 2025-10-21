@@ -1,6 +1,6 @@
 <?php
 
-// src/kernel.php
+// src/Kernel.php
 
 namespace HyperAPI;
 
@@ -8,6 +8,7 @@ use FastRoute\Dispatcher;
 use FastRoute\RouteCollector;
 
 class Kernel {
+
     private array $before=[];
     private array $after=[];
     private array $addons=[];
@@ -24,7 +25,6 @@ class Kernel {
     public function post(string $pattern, callable $handler) { $this->map('POST',$pattern,$handler); }
 
     private function map(string $method,string $pattern, callable $handler) {
-        // Acumular rutas en lugar de reconstruir dispatcher inmediatamente
         $this->routes[] = [$method, $pattern, $handler];
     }
 
@@ -36,10 +36,9 @@ class Kernel {
     }
 
     public function run() {
+    
         $uri = parse_url($_SERVER['REQUEST_URI'],PHP_URL_PATH);
         $method = $_SERVER['REQUEST_METHOD'];
-
-        // Construir dispatcher con todas las rutas acumuladas
         $this->dispatcher = \FastRoute\simpleDispatcher(function(RouteCollector $r) {
             foreach($this->routes as [$m, $p, $h]) {
                 $fp = preg_replace('/\\{(\\w+)\\}/','{$1}', $p);
@@ -80,5 +79,5 @@ class Kernel {
                 break;
         }
     }
-}
+} 
 
